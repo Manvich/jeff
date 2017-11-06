@@ -28,7 +28,7 @@ function draw() {
 	
 	if (mouseIsPressed &&
 		mouseX > x && mouseX < x + 500 &&
-		mouseY > y && mouseY < y + 475) {
+		mouseY > y && mouseY < y + 450) {
 		circles.push([mouseX - x, mouseY - y, s, c]);
 	}
 	
