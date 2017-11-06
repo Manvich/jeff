@@ -3,7 +3,7 @@ var winH;
 var img;
 
 function preload() {
-	img = loadImage("cuts/untrimmed.jpg");
+	img = loadImage("cuts/untrimmed2.jpg");
 }
 
 function setup() {
@@ -19,7 +19,6 @@ function draw() {
 		createCanvas(winW, winH);
 	}
 	background(240);
-	image(img, winW / 2, winH / 2);
+	image(img, winW / 2 - 250, winH / 2 - 300);
 	fill(255);
-	rect(winW / 2 - 200, winH / 2 - 200, 400, 400);
 }
