@@ -35,7 +35,7 @@ function draw() {
 	noStroke();
 	for (var i = 0; i < circles.length; i++) {
 		fill(circles[i][3]);
-		ellipse(circles[i][0], circles[i][1], circles[i][2]);
+		ellipse(x + circles[i][0], y + circles[i][1], circles[i][2]);
 	}
 	
 	stroke(255);
