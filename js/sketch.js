@@ -9,7 +9,7 @@ function setup() {
 	winH = window.innerHeight;
 	createCanvas(winW, winH);
 	circles = new Array();
-	s = 10;
+	s = 20;
 	c = 255;
 }
 
@@ -38,7 +38,7 @@ function draw() {
 		ellipse(x + circles[i][0], y + circles[i][1], circles[i][2]);
 	}
 	
-	stroke(255);
+	stroke(0);
 	noFill();
 	rect(x, y, 500, 600);
 }
