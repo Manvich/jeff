@@ -1,4 +1,4 @@
-var winW, winH, img, circles, size, color;
+var winW, winH, img, circles, s, c;
 
 function preload() {
 	img = loadImage("cuts/untrimmed3.jpg");
@@ -9,8 +9,8 @@ function setup() {
 	winH = window.innerHeight;
 	createCanvas(winW, winH);
 	circles = new Array();
-	size = 10;
-	color = 255;
+	s = 10;
+	c = 255;
 }
 
 function draw() {
@@ -29,7 +29,7 @@ function draw() {
 	if (mouseIsPressed &&
 		mouseX > x && mouseX < x + 500 &&
 		mouseY > y && mouseY < y + 475) {
-		circles.push([mouseX - x, mouseY - y, size, color]);
+		circles.push([mouseX - x, mouseY - y, s, c]);
 	}
 	
 	noStroke();
@@ -38,7 +38,7 @@ function draw() {
 		ellipse(circles[i][0], circles[i][1], circles[i][2]);
 	}
 	
-	stroke();
-	nofill();
+	stroke(255);
+	noFill();
 	rect(x, y, 500, 600);
 }
