@@ -14,13 +14,14 @@ function setup() {
 }
 
 function draw() {
-	var x = winW / 2 - 250;
-	var y = winH / 2 - 300;
 	if (window.innerWidth != winW || window.innerHeight != winH) {
 		winW = window.innerWidth;
 		winH = window.innerHeight;
 		createCanvas(winW, winH);
 	}
+	
+	var x = winW / 2 - 250;
+	var y = winH / 2 - 300;
 	
 	background(240);
 	image(img, x, y);
