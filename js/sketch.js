@@ -5,6 +5,7 @@ function preload() {
 }
 
 function setup() {
+	strokeWeight(10);
 	winW = window.innerWidth;
 	winH = window.innerHeight;
 	createCanvas(winW, winH);
@@ -36,8 +37,8 @@ function draw() {
 	}
 	
 	if (mouseIsPressed &&
-		mouseX > x && mouseX < x + 500 &&
-		mouseY > y && mouseY < y + 450) {
+		mouseX > x + s/2 && mouseX < x + 500 - s/2 &&
+		mouseY > y + s/2 && mouseY < y + 450 - s/2) {
 		circles.push([mouseX - x, mouseY - y, s, c]);
 		noStroke();
 		fill(c);
