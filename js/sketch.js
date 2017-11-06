@@ -21,4 +21,9 @@ function draw() {
 	background(240);
 	image(img, winW / 2 - 250, winH / 2 - 300);
 	fill(255);
+	if (mouseIsPressed &&
+		mouseX > winW / 2 - 250 && mouseX < winW / 2 + 250 &&
+		mouseY > winH / 2 - 300 && mouseY < winH / 2 + 300) {
+		ellipse(mouseX, mouseY, 10, 10);
+	}
 }
