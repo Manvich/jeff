@@ -1,4 +1,5 @@
-var winW, winH, img, circles;
+var winW, winH, x, y;
+var img, circles;
 var cSlider, sSlider;
 var c, s;
 
@@ -14,9 +15,6 @@ function setup() {
 }
 
 function draw() {
-	var x = winW / 2 - 250;
-	var y = winH / 2 - 300;
-	
 	s = sSlider.value();
 	c = cSlider.value() * 255;
 	
