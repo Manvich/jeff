@@ -11,6 +11,8 @@ function setup() {
 	winW = window.innerWidth;
 	winH = window.innerHeight;
 	createCanvas(winW, winH);
+	background(240);
+	image(img, x, y);
 	circles = new Array();
 }
 
@@ -22,8 +24,6 @@ function draw() {
 		winH = window.innerHeight;
 		createCanvas(winW, winH);
 	}
-	background(240);
-	image(img, x, y);
 	noStroke();
 	fill(255);
 	if (mouseIsPressed &&
