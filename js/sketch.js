@@ -7,6 +7,8 @@ function preload() {
 }
 
 function setup() {
+	cSlider = createSlider(0, 1, 1);
+	sSlider = createSlider(5, 100, 20);
 	init();
 	circles = new Array();
 }
@@ -16,7 +18,7 @@ function draw() {
 	var y = winH / 2 - 300;
 	
 	s = sSlider.value();
-	c = cSlider.value();
+	c = cSlider.value() * 255;
 	
 	if (window.innerWidth != winW || window.innerHeight != winH) {
 		init();
@@ -37,7 +39,7 @@ function draw() {
 	}
 	
 	stroke(0);
-	strokeWeight(20);
+	strokeWeight(10);
 	noFill();
 	rect(x, y, 500, 600);
 }
@@ -50,16 +52,12 @@ function init() {
 	x = winW / 2 - 250;
 	y = winH / 2 - 300;
 	
+	cSlider.position(x + 10, y + 625);
+	sSlider.position(x + 10, y + 650);
+	
 	background(240);
 	image(img, x, y);
-	
-	cSlider = createSlider(0, 1, 1);
-	cSlider.position(x + 10, y + 625);
-	sSlider = createSlider(5, 100, 20);
-	sSlider.position(x + 10, y + 650);
 }
 
 //implementations:
 //undo button
-//black and white pens
-//slider to change size
