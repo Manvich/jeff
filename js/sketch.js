@@ -96,7 +96,4 @@ function outline() {
 	rect(x - 50, y - 50, 50, 600);
 	rect(x + 500, y - 50, 50, 600);
 	image(img2, x, y);
-}
-
-//implementations:
-//undo button
+}	
