@@ -60,15 +60,14 @@ function init() {
 	x = winW / 2 - 250;
 	y = winH / 2 - 300;
 	
-	cSlider.position(x + 15, y + 625);
-	sSlider.position(x + 15, y + 650);
+	cSlider.position(x + 25, y + 625);
+	sSlider.position(x + 25, y + 650);
 	undoButton.position(x + 450, y + 625);
-	
-	text("Color:", x + 10, y + 625);
-	text("Size:", x + 10, y + 650);
 	
 	background(240);
 	image(img1, x, y);
+	text("Color:", x + 10, y + 625);
+	text("Size:", x + 10, y + 650);
 }
 
 function undo() {
