@@ -80,7 +80,7 @@ function drawCircles() {
 	for (var i = 0; i < circles.length; i++) {
 		for (var j = 0; j < circles[i].length; j++) {
 			fill(circles[i][j][3]);
-			ellipse(x + circles[i][j][0], y + circles[i][[j]1], circles[i][j][2]);
+			ellipse(x + circles[i][j][0], y + circles[i][[j][1], circles[i][j][2]);
 		}
 	}
 }
