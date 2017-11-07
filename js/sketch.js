@@ -1,12 +1,13 @@
 var winW, winH, x, y;
-var img, circles;
+var img1, img2, circles;
 var cSlider, sSlider;
 var undoButton;
 var c, s;
 var drewSomething;
 
 function preload() {
-	img = loadImage("cuts/untrimmed3.jpg");
+	img1 = loadImage("cuts/untrimmed3.jpg");
+	img2 = loadImage("cuts/untrimmed4/png");
 }
 
 function setup() {
@@ -26,6 +27,7 @@ function draw() {
 	if (window.innerWidth != winW || window.innerHeight != winH) {
 		init();
 		drawCircles();
+		outline();
 	}
 	
 	if (mouseIsPressed &&
@@ -63,7 +65,7 @@ function init() {
 	undoButton.position(x + 450, y + 625);
 	
 	background(240);
-	image(img, x, y);
+	image(img1, x, y);
 }
 
 function undo() {
@@ -72,7 +74,7 @@ function undo() {
 	circles.push([]);
 	
 	background(240);
-	image(img, x, y);
+	image(img1, x, y);
 	drawCircles();
 	outline();
 }
@@ -91,9 +93,9 @@ function outline() {
 	noStroke();
 	fill(240);
 	rect(x - 50, y - 50, 600, 50);
-	rect(x - 50, y + 600, 600, 50);
 	rect(x - 50, y, 50, 600);
 	rect(x + 500, y, 50, 600);
+	image(img2, x, y);
 }
 
 //implementations:
