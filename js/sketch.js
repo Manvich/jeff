@@ -1,14 +1,15 @@
 var winW, winH, x, y;
-var img1, img2, circles;
+var img1, img2, img3;
 var cSlider, sSlider;
 var undoButton;
 var resetButton;
-var c, s;
+var c, s, circles;
 var drewSomething;
 
 function preload() {
-	img1 = loadImage("cuts/untrimmed3.jpg");
-	img2 = loadImage("cuts/untrimmed4.png");
+	img1 = loadImage("images/untrimmed.jpg");
+	img2 = loadImage("images/faceMask.png");
+	img3 = loadImage("images/title.png");
 }
 
 function setup() {
@@ -66,10 +67,11 @@ function init() {
 	cSlider.position(x + 50, y + 625);
 	sSlider.position(x + 50, y + 650);
 	undoButton.position(x + 450, y + 625);
-	resetButton.position(x + 450, y + 645
+	resetButton.position(x + 450, y + 645);
 	
 	background(240);
 	image(img1, x, y);
+	image(img3, x, y - 125);
 	text("Color:", x + 10, y + 638);
 	text("Size:", x + 10, y + 663);
 }
