@@ -2,6 +2,7 @@ var winW, winH, x, y;
 var img1, img2, circles;
 var cSlider, sSlider;
 var undoButton;
+var resetButton;
 var c, s;
 var drewSomething;
 
@@ -15,6 +16,8 @@ function setup() {
 	sSlider = createSlider(5, 100, 20);
 	undoButton = createButton("undo");
 	undoButton.mousePressed(undo);
+	resetButton = createButton("reset");
+	resetButton.mousePressed(reset);
 	init();
 	circles = new Array([]);
 	drewSomething = false;
@@ -63,6 +66,7 @@ function init() {
 	cSlider.position(x + 50, y + 625);
 	sSlider.position(x + 50, y + 650);
 	undoButton.position(x + 450, y + 625);
+	resetButton.position(x + 450, y + 645
 	
 	background(240);
 	image(img1, x, y);
@@ -78,6 +82,11 @@ function undo() {
 	init();
 	drawCircles();
 	outline();
+}
+
+function reset() {
+	circles = new Array([]);
+	init();
 }
 
 function drawCircles() {
