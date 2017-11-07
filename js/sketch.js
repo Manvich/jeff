@@ -60,14 +60,14 @@ function init() {
 	x = winW / 2 - 250;
 	y = winH / 2 - 300;
 	
-	cSlider.position(x + 25, y + 625);
-	sSlider.position(x + 25, y + 650);
+	cSlider.position(x + 50, y + 625);
+	sSlider.position(x + 50, y + 650);
 	undoButton.position(x + 450, y + 625);
 	
 	background(240);
 	image(img1, x, y);
-	text("Color:", x + 10, y + 625);
-	text("Size:", x + 10, y + 650);
+	text("Color:", x + 10, y + 650);
+	text("Size:", x + 10, y + 675);
 }
 
 function undo() {
@@ -77,6 +77,8 @@ function undo() {
 	
 	background(240);
 	image(img1, x, y);
+	text("Color:", x + 10, y + 650);
+	text("Size:", x + 10, y + 675);
 	drawCircles();
 	outline();
 }
