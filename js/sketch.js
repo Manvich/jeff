@@ -29,13 +29,14 @@ function draw() {
 	}
 	
 	if (mouseIsPressed &&
-		mouseX > x + s/2 && mouseX < x + 500 - s/2 &&
-		mouseY > y + s/2 && mouseY < y + 450 - s/2) {
+		mouseX > x && mouseX < x + 500 &&
+		mouseY > y && mouseY < y + 450) {
 		drewSomething = true;
 		circles[circles.length - 1].push([mouseX - x, mouseY - y, s, c]);
 		noStroke();
 		fill(c);
 		ellipse(mouseX, mouseY, s);
+		outline();
 	}
 	
 	if (!mouseIsPressed && drewSomething) {
@@ -59,7 +60,7 @@ function init() {
 	
 	cSlider.position(x + 10, y + 625);
 	sSlider.position(x + 10, y + 650);
-	undoButton.position(x + 475, y + 625);
+	undoButton.position(x + 450, y + 625);
 	
 	background(240);
 	image(img, x, y);
@@ -73,6 +74,7 @@ function undo() {
 	background(240);
 	image(img, x, y);
 	drawCircles();
+	outline();
 }
 
 function drawCircles() {
@@ -83,6 +85,15 @@ function drawCircles() {
 			ellipse(x + circles[i][j][0], y + circles[i][j][1], circles[i][j][2]);
 		}
 	}
+}
+
+function outline() {
+	noStroke();
+	fill(240);
+	rect(x - 50, y - 50, 600, 50);
+	rect(x - 50, y + 600, 600, 50);
+	rect(x - 50, y, 50, 600);
+	rect(x + 500, y, 50, 600);
 }
 
 //implementations:
