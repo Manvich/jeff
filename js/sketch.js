@@ -7,7 +7,7 @@ var drewSomething;
 
 function preload() {
 	img1 = loadImage("cuts/untrimmed3.jpg");
-	img2 = loadImage("cuts/untrimmed4/png");
+	img2 = loadImage("cuts/untrimmed4.png");
 }
 
 function setup() {
