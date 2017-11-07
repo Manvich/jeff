@@ -71,7 +71,7 @@ function init() {
 	
 	background(240);
 	image(img1, x, y);
-	image(img3, x, y - 125);
+	image(img3, x - 50, y - 150);
 	text("Color:", x + 10, y + 638);
 	text("Size:", x + 10, y + 663);
 }
