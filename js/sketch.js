@@ -76,9 +76,9 @@ function undo() {
 	circles.push([]);
 	
 	background(240);
+	text("Color:", x + 10, y + 638);
+	text("Size:", x + 10, y + 663);
 	image(img1, x, y);
-	//text("Color:", x + 10, y + 638);
-	//text("Size:", x + 10, y + 663);
 	drawCircles();
 	outline();
 }
