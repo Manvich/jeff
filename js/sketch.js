@@ -66,8 +66,8 @@ function init() {
 	
 	cSlider.position(x + 50, y + 625);
 	sSlider.position(x + 50, y + 650);
-	undoButton.position(x + 450, y + 625);
-	resetButton.position(x + 450, y + 645);
+	undoButton.position(x + 430, y + 625);
+	resetButton.position(x + 450, y + 625);
 	
 	background(240);
 	image(img1, x, y);
