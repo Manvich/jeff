@@ -66,8 +66,8 @@ function init() {
 	
 	background(240);
 	image(img1, x, y);
-	text("Color:", x + 10, y + 650);
-	text("Size:", x + 10, y + 675);
+	text("Color:", x + 10, y + 638);
+	text("Size:", x + 10, y + 663);
 }
 
 function undo() {
@@ -77,8 +77,8 @@ function undo() {
 	
 	background(240);
 	image(img1, x, y);
-	text("Color:", x + 10, y + 650);
-	text("Size:", x + 10, y + 675);
+	text("Color:", x + 10, y + 638);
+	text("Size:", x + 10, y + 663);
 	drawCircles();
 	outline();
 }
