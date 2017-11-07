@@ -93,8 +93,8 @@ function outline() {
 	noStroke();
 	fill(240);
 	rect(x - 50, y - 50, 600, 50);
-	rect(x - 50, y, 50, 600);
-	rect(x + 500, y, 50, 600);
+	rect(x - 50, y - 50, 50, 600);
+	rect(x + 500, y - 50, 50, 600);
 	image(img2, x, y);
 }
 
